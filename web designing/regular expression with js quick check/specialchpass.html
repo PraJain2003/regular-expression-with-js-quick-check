@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>Write a special character password using special symbol,alphabet,numeric value and password start with numeric value and end with alphabet</h1>
+<p>Enter password<input type="text" id="txt1" /></p>
+<button onclick="A()">Check</button>
+
+<script>
+	function A()
+	{
+		var pattern=/^[1-9]{3}\@\=\w{3}$/; 
+		var a=document.getElementById("txt1").value;
+		var ans=pattern.test(a);
+		console.log(ans);
+	}
+</script>
+</body>
+</html>

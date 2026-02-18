@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>Registration no. contains alphabets and numeric values and mobile no. and password</h1>
+<p>Enter registration no. <input type="password" id="txt1"  /></p>
+<button onclick="A()">Check</button>
+<p>enter Mobile no. <input type="text" id="txt2" /></p>
+<button onclick="B()">Check</button>
+<p>Enter password<input type="text" id="txt3" /></p>
+<button onclick="C()">Check</button>
+<script>
+
+	function A()
+	{
+		var pat=/^\w+$/
+		var val=document.getElementById("txt1").value;
+		console.log(val);
+		console.log(pat.test(val));
+	}
+	function B()
+	{
+		var pat=/^\+[9][1]\-[6-9][0-9]{9}$/
+		var val=document.getElementById("txt2").value;
+		console.log(val);
+		console.log(pat.test(val));
+	}
+	function C()
+	{
+		var pattern=/^[1-9]{3}\@\=\w{3}$/; 
+		var a=document.getElementById("txt3").value;
+		var ans=pattern.test(a);
+		console.log(ans);
+	}
+</script>
+</body>
+</html>

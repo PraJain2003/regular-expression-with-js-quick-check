@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>enter special character password and enter email that accepts alphabets and numeric values</h1>
+<p>Enter password<input type="text" id="txt1" /></p>
+<button onclick="A()">Check</button>
+<p>enter Email id<input type="text" id="txt2"  /></p>
+<button onclick="B()">Check</button>
+
+<script>
+	function A()
+	{
+		var pattern=/^[1-9]{3}\@\=\w{3}$/; 
+		var a=document.getElementById("txt1").value;
+		var ans=pattern.test(a);
+		console.log(ans);
+	}
+	function B()
+	{
+		var pat=/^\w*\@\w*\.\w{2,3}$/
+		var val=document.getElementById("txt2").value;
+		console.log(val);
+		console.log(pat.test(val));
+	}
+</script>
+</body>
+</html>
